@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies - Meals For Everyone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section id="landing--page">
+<nav>
+    <div class="row nav__row">
+        <figure>
+            <img src="logo.png" class="logo" class="logo" alt="">
+        </figure>
+        <ul class="nav__list">
+            <li class="nav__list--item">
+                <a href="#" class="nav__list--link">Home</a>
+            </li>
+            <li class="nav__list--item">
+                <a href="#" class="nav__list--link">Find Recipe</a>
+            </li>
+            <li class="nav__list--item">
+                <button class="nav--btn">
+                    <a href="#" class="nav__list--link">Contact</a>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="header">
+    <div class="container">
+        <div class="row header__container">
+            <div class="header__titles">
+                <h1 class="header__title">
+                    Easy Meal Prepping
+                </h1>
+                <h2 class="header__sub-title">
+                    Find Meals With Ingredients In Your Fridge!
+                </h2>
+            </div>
+            <div class="input__wrapper">
+                <input type="text" id="search" placeholder="Search by ingredient, vegetarian, etc." onchange="onSearch(event)"></input>
+                <button class="input__button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="meals">
+                <i class="fas fa-spinner meals__loading--spinner"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</body>
+</html>
