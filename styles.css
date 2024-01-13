@@ -146,11 +146,13 @@ input {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    z-index: 0;
 }
 
 .meal__container {
     width: calc(100% / 3);
     margin-bottom: 36px;
+    z-index: 0;
 }
 
 .meals--img {
@@ -168,9 +170,11 @@ input {
     margin-bottom: 16px;
 }
 
-
 .meals__loading--spinner {
     display: none !important;
+    z-index: 100;
+    font-size: 46px;
+    margin-bottom: 36px;
 }
 
 .meals__loading .meals__loading--spinner {
@@ -179,6 +183,13 @@ input {
 
 .fa-spinner {
     animation: rotate 600ms infinite linear;
+}
+
+.meals__loading {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 10000;
 }
 
 @keyframes rotate {
