@@ -33,11 +33,13 @@ async function onSearch(event) {
   const mealsData = await meals.json();
 
   setTimeout(() => {
-    if (mealsData.meals == null) {
+    const mealListValue = event.target.value;
+    let empty = ''
+    if (mealsData.meals === null) {
       mealsListEl.innerHTML = `<h2>Oops! Looks like we can't find meals with: ${mealListValue}</h2>`;
     }
 
-    else if (mealsData == '') {
+    else if (mealListValue === empty) {
       mealsListEl.innerHTML = `<h2>Please enter in an ingredient in the search bar</h2>`;
     }
 
@@ -47,6 +49,8 @@ async function onSearch(event) {
         .map((meals) => mealsHTML(meals))
         .join("")
     }
+
+    console.log(empty)
     document.body.classList.remove("meals__loading");
-  }, 3000)
+  }, 1000)
 }
