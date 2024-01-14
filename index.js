@@ -2,10 +2,10 @@ const mealsListEl = document.querySelector(".meals");
 
 async function main() {
   const meals = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast`
+    `https://www.themealdb.com/api/json/v1/1/filter.php?i=`
   );
   const mealsData = await meals.json();
-  mealsListEl.innerHTML = mealsData.meals
+  mealsListEl.innerHTML = mealsData.meals.slice([0], [15])
     .map((meals) => mealsHTML(meals))
     .join("");
 }
@@ -49,8 +49,6 @@ async function onSearch(event) {
         .map((meals) => mealsHTML(meals))
         .join("")
     }
-
-    console.log(empty)
     document.body.classList.remove("meals__loading");
   }, 1000)
 }
